@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 10px;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1000" height="600" style="border:1px solid #d3d3d3;">
+
+</canvas>
+
+<script>
+    fetch('http://localhost//qwerty.json?t=' + (new Date().getMilliseconds()))
+        .then(function (response) {
+
+            return response.json();
+        })
+        .then(function (myJson) {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+
+
+            console.log(myJson.points);
+            Object.values(myJson.paths).forEach((el) => {
+                console.log(myJson.points[el.to][0]);
+                ctx.moveTo(myJson.points[el.from][0] * 20, myJson.points[el.from][1] * 20);
+                ctx.lineTo(myJson.points[el.to][0] * 20, myJson.points[el.to][1] * 20);
+
+            });
+            ctx.stroke();
+            Object.keys(myJson.points).forEach((el) => {
+                drawCircleAndNumber(myJson.points[el][0] * 20, myJson.points[el][1] * 20, 25, el.replace("#", ""));
+
+            });
+
+            function drawCircleAndNumber(x, y, raza, numarul) {
+                ctx.beginPath();
+                ctx.arc(x, y, raza, 0, 2 * Math.PI);
+                ctx.fillStyle = 'AntiqueWhite';
+                ctx.fill();
+                ctx.font = "20px Arial ";
+                ctx.fillStyle = 'black';
+                ctx.fillText(numarul, x, y);
+                ctx.stroke();
+            }
+
+            //console.log(myJson.paths[0]);
+            // ...
+            //graph();
+        });
+
+    function graph() {
+        var c = document.getElementById("myCanvas");
+
+        var ctx = c.getContext("2d");
+        var nr = 1, NrMax = 6;
+
+
+        function calc() {
+
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

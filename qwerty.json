@@ -1,0 +1,148 @@
+{
+  "points": {
+    "#1": [4,2],
+    "#2": [3,9],
+    "#3": [8,6],
+    "#4": [12,10],
+    "#5": [14,4],
+    "#6": [22,2]
+
+}
+,
+  "paths": [
+    {
+      "from": "#1",
+      "to": "#2",
+      "auto": {
+        "distance": 2,
+        "price": 12,
+        "time": 30
+      },
+      "train": {
+        "distance": 1,
+        "price": 8,
+        "time": 25
+      },
+      "plane": {
+        "distance": 0.8,
+        "price": 50,
+        "time": 10
+      }
+    },
+    {
+      "from": "#1",
+      "to": "#3",
+      "auto": {
+        "distance": 1,
+        "price": 12,
+        "time": 30
+      },
+      "train": {
+        "distance": 1,
+        "price": 8,
+        "time": 25
+      },
+      "plane": {
+        "distance": 0.8,
+        "price": 50,
+        "time": 10
+      }
+    },
+    {
+      "from": "#1",
+      "to": "#5",
+      "auto": {
+        "distance": 3,
+        "price": 11,
+        "time": 40
+      },
+      "train": {
+        "distance": 2,
+        "price": 10,
+        "time": 29
+      },
+      "plane": {
+        "distance": 0.9,
+        "price": 70,
+        "time": 11
+      }
+    },
+    {
+      "from": "#2",
+      "to": "#4",
+      "auto": {
+        "distance": 3,
+        "price": 16,
+        "time": 30
+      },
+      "train": {
+        "distance": 3,
+        "price": 9,
+        "time": 28
+      },
+      "plane": {
+        "distance": 0.9,
+        "price": 40,
+        "time": 17
+      }
+    },
+    {
+      "from": "#4",
+      "to": "#5",
+      "auto": {
+        "distance": 6,
+        "price": 22,
+        "time": 26
+      },
+      "train": {
+        "distance": 7,
+        "price": 10,
+        "time": 30
+      },
+      "plane": {
+        "distance": 1,
+        "price": 50,
+        "time": 18
+      }
+    },
+    {
+      "from": "#4",
+      "to": "#6",
+      "auto": {
+        "distance": 6,
+        "price": 22,
+        "time": 26
+      },
+      "train": {
+        "distance": 7,
+        "price": 10,
+        "time": 30
+      },
+      "plane": {
+        "distance": 1,
+        "price": 50,
+        "time": 18
+      }
+    },
+    {
+      "from": "#5",
+      "to": "#6",
+      "auto": {
+        "distance": 6,
+        "price": 22,
+        "time": 26
+      },
+      "train": {
+        "distance": 7,
+        "price": 10,
+        "time": 30
+      },
+      "plane": {
+        "distance": 1,
+        "price": 50,
+        "time": 18
+      }
+    }
+  ]
+}
+
